@@ -12,6 +12,13 @@
             }
             body{
                 background-color: rgb(23, 23, 27);
+                color:aliceblue;
+                font-family: "arial", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            #base{
+                display:flex;
             }
             #about{
                 border-style: solid;
@@ -21,7 +28,6 @@
             }
             #logo{
                 width:25em;
-                float: right;
                 margin-top: -70px;
             }
             #bio_summary {
@@ -32,36 +38,99 @@
                 text-align: center;
                 font-size: 3em;
             }
+            #repos{
+                width:80%;
+                overflow-y: auto;
+                padding:20px;
+            }
             #persona{
-                margin: 100px;
+                width: 20%;
+                margin: 50px;
             }
             #links{
                 svg{
-                    width: 20px;
-                    height: 20px;
+                    width: 60px;
+                    height: 60px;
                     box-shadow: 0px 0px 8px 1px #00ffff;
                     fill:aliceblue;
-                    width:20px;
+                    float: right;
                 }
                 svg:hover{
                     box-shadow: 0px 0px 8px 3px #00ffff;
                 }
             }
+            .repo {
+                border-style: solid;
+                border-color: aliceblue;
+                width: flex;
+                height:flex;
+                border-radius: 10px;
+                a, h1{
+                    color:aliceblue;
+                }
+                h1 {
+                    font-family: "Pompiere", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    border-style: solid;
+                    border-color: aliceblue;
+                    border-radius: 10px;
+                    transform: translateY(-40px);
+                    background-color: rgb(23, 23, 27);
+                    width: fit-content;
+                    padding: 5px 20px;
+                    display: inline;
+                }
+                h3{
+                    margin:10px;
+                }
+                p{
+                    margin-left: 15px;
+                }
+            }
+            .smallImg{
+                height: 200px;
+                margin:10px;
+                transition: height 0.3s ease;
+            }
+            .smallImg:hover{
+                height: 400px;
+            }
+            #cryptidCode{
+                color:rgb(43, 189, 226);
+            }
+            #cryptidCode:hover ~ #cryptidSetup{
+                border: 2px solid rgb(43, 128, 226);
+            }
+            
             
         </style>
     </head>
     <body>
-        <div id="persona">
-            <img id="logo" src="RRCodeWorks_logo.png"/>
-            <h1 id="bio_summary" class="pompiere-regular">Father, Creator, Coder ... Artistry in many forms</h1>
-            <div id="links">
-                <a href="https://www.linkedin.com/in/richard-ramage">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                </a>
+        <div id="base">
+            <div id="repos">
+                <div class="repo">
+                    <h1>Project: <a href="https://github.com/RnRCodeWorks/CryptidFinder">Cryptid Finder</a></h1>
+                    <h3>Overview:</h3>
+                    <p>Cryptid is a 3-5 player board game in which each player is trying to be the first to figure out where the cryptid locations is.  
+                        Each player is given a different valid location rule, i.e "Within two of a swamp", based on the board layout and player count.  Each turn a player is allowed to ask one other 
+                        player if a location is valid based on that players rule.</p>
+                    <p>The idea behind this project was just code practice and to see if any maps configurations had multiple right answers.  Currently it does not account for advanced maps, they contain one more
+                        color of building and inverse clues. Given the board layout code, <span id="cryptidCode">ie 453261</span>, and player count, it will know the orientation of each board, structure locations, associated clues.
+                
+                    <img class="smallImg" src="https://cf.geekdo-images.com/CuUr74iE6lcDJPj__4qaNA__imagepage/img/s4-ChmOvdA5FjqaH11Rd7fqYo24=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5619688.jpg" />
+                    <img class="smallImg" id="cryptidSetup" src="https://cf.geekdo-images.com/dqfIqkWe4le5QSXCCrowOA__imagepage/img/AaJkN-eJQ0lwBkLAkCGVDjFVGFI=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4868010.jpg" />
+                    </p>
+                </div>
             </div>
-        </div>
-        <div id="about">
-        <div>
+            <div id="persona">
+                <img id="logo" src="RRCodeWorks_logo.png"/>
+                <div id="links">
+                    <a href="https://www.linkedin.com/in/richard-ramage">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </body>
 </html>
